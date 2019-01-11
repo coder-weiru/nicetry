@@ -1,2 +1,1 @@
-# nicetry
-A playground project
+Nicetry Application

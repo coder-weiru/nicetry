@@ -1,6 +1,6 @@
 server:
   port: 8181 
-  servlet.context-path: /nicetry
+  servlet.context-path: /li.nicetry.app.service
   
 logging:
   pattern:
@@ -11,8 +11,6 @@ logging:
     li.nicetry: DEBUG
 
 spring:
-  profiles:
-    active: local
   jackson:
     default-property-inclusion: NON_NULL
     
@@ -22,6 +20,6 @@ management:
       exposure:
         include: health, info, metrics, env
  
-pdfConverterService:
-  url: https://url-to-pdf-api.herokuapp.com/api/render 
- 
+urlToPdfService:
+  url: https://url-to-pdf-api.herokuapp.com/api
+  endpoint: /render

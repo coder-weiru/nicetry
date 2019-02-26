@@ -1,6 +1,21 @@
 package li.nicetry.app.service;
 
-public class UrlToPdfRequest {
+public class UrlConverterRequest {
+
+	public enum OutputFormat {
+		PDF("pdf"), SCREENSHOT("screenshot");
+
+		private final String value;
+
+		OutputFormat(String value) {
+			this.value = value;
+		}
+
+		public String getValue() {
+			return this.value;
+		}
+	}
+
 	// Url to render. Either url or html is required
 	private String url;
 
@@ -21,7 +36,7 @@ public class UrlToPdfRequest {
 	private boolean scrollPage = true;
 
 	public String getUrl() {
-		return url;
+		return this.url;
 	}
 
 	public void setUrl(String url) {
@@ -29,7 +44,7 @@ public class UrlToPdfRequest {
 	}
 
 	public String getOutput() {
-		return output;
+		return this.output;
 	}
 
 	public void setOutput(String output) {
@@ -37,7 +52,7 @@ public class UrlToPdfRequest {
 	}
 
 	public String getHtml() {
-		return html;
+		return this.html;
 	}
 
 	public void setHtml(String html) {
@@ -45,7 +60,7 @@ public class UrlToPdfRequest {
 	}
 
 	public boolean isEmulateScreenMedia() {
-		return emulateScreenMedia;
+		return this.emulateScreenMedia;
 	}
 
 	public void setEmulateScreenMedia(boolean emulateScreenMedia) {
@@ -53,7 +68,7 @@ public class UrlToPdfRequest {
 	}
 
 	public boolean isIgnoreHttpsErrors() {
-		return ignoreHttpsErrors;
+		return this.ignoreHttpsErrors;
 	}
 
 	public void setIgnoreHttpsErrors(boolean ignoreHttpsErrors) {
@@ -61,7 +76,7 @@ public class UrlToPdfRequest {
 	}
 
 	public boolean isScrollPage() {
-		return scrollPage;
+		return this.scrollPage;
 	}
 
 	public void setScrollPage(boolean scrollPage) {

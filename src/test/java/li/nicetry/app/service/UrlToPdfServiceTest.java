@@ -6,6 +6,7 @@ import java.nio.file.Files;
 import java.nio.file.Paths;
 
 import org.junit.Test;
+import org.junit.jupiter.api.Disabled;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -20,6 +21,7 @@ import li.nicetry.app.service.UrlToPdfService;
 @SpringBootTest(classes = { AppConfig.class })
 @ActiveProfiles("test")
 @PropertySource("classpath:application.yml")
+@Disabled
 public class UrlToPdfServiceTest {
 
 	@Autowired

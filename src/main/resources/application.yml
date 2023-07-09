@@ -1,6 +1,6 @@
 server:
-  port: 8181 
-  servlet.context-path: /li.nicetry.app.service
+  port: 8181
+  servlet.context-path: /
   
 logging:
   pattern:

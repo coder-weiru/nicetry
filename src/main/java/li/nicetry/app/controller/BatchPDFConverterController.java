@@ -22,7 +22,7 @@ import io.swagger.annotations.ApiOperation;
 import io.swagger.annotations.ApiResponse;
 import io.swagger.annotations.ApiResponses;
 import li.nicetry.app.exception.ServiceException;
-import li.nicetry.app.service.UrlToPdfService;
+import li.nicetry.app.service.UrlConverterService;
 
 @RestController
 @Api(value = "", produces = "application/hal+json")
@@ -31,11 +31,11 @@ public class BatchPDFConverterController {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(BatchPDFConverterController.class);
 
-	private UrlToPdfService urlToPdfService;
+	private UrlConverterService urlConverterService;
 	
 	@Autowired
-	public BatchPDFConverterController(UrlToPdfService urlToPdfService) {
-		Assert.notNull(urlToPdfService, "'urlToPdfService' must not be null");
+	public BatchPDFConverterController(UrlConverterService urlConverterService) {
+		Assert.notNull(urlConverterService, "'urlConverterService' must not be null");
 		// this.pdfConverterService = pdfConverterService;
 	}
 
